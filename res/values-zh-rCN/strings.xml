@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="smart_gesture_entry">智能动作</string>
+    <string name="smart_answer">智能动作</string>
+    <string name="shake_to_answer_title">通过摇晃手机接听电话</string>
+    <string name="face_down_title">朝下放置手机使来电静音</string>
+    <string name="pick_up_title">拿起手机并且贴近耳朵接听电话</string>
+
+    <string name="no_sensor">未发现传感器</string>
+</resources>

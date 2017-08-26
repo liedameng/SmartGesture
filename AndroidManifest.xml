@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.boway.smartgesture"
+    android:sharedUserId="android.uid.system" >
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="com.mediatek.permission.WAKE_DEVICE_SENSORHUB" />
+
+    <application
+        android:name="com.boway.smartgesture.service.SmartGestureApplication"
+        android:icon="@drawable/ic_smartgesture"
+        android:label="@string/smart_gesture_entry"
+        android:theme="@android:style/Theme.Material.Settings"
+        android:configChanges="orientation|keyboardHidden|keyboard|screenSize|mcc|mnc">
+       <activity
+            android:name="com.boway.smartgesture.ui.SmartAnswerSettings"
+            android:label="@string/smart_answer"
+            android:icon="@drawable/ic_smartgesture"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.device" />
+
+            <meta-data android:name="com.android.settings.icon"
+                android:value="@drawable/ic_smartgesture" />
+
+        </activity>
+        <service android:name="com.boway.smartgesture.service.SensorEventListenerService"
+            android:directBootAware="true">
+        </service>
+
+        <receiver
+            android:name="com.boway.smartgesture.service.BootCompletedReceiver"
+            android:directBootAware="true" >
+            <intent-filter android:priority="0x7FFFFFFF" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

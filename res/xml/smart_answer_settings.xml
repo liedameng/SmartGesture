@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:title="@string/smart_answer">
+    <SwitchPreference
+        android:key="shake_to_answer_pref"
+        android:title="@string/shake_to_answer_title"
+        android:summary="@null" />
+
+    <SwitchPreference
+        android:key="face_down_pref"
+        android:title="@string/face_down_title"
+        android:summary="@null" />
+
+    <SwitchPreference
+        android:key="pick_up_pref"
+        android:title="@string/pick_up_title"
+        android:summary="@null" />
+
+ </PreferenceScreen>
+

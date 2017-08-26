@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="smart_gesture_entry">Smart Motion</string>
+    <string name="smart_answer">Smart Motion</string>
+    <string name="shake_to_answer_title">Shake to Answer</string>
+    <string name="face_down_title">Face down to turn mute</string>
+    <string name="pick_up_title">Pick up to Answer</string>
+
+    <string name="no_sensor">No working sensor found</string>
+</resources>
